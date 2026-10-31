@@ -22,33 +22,9 @@
       <rect x="90" y="60" width="700" height="520" rx="26" ry="26"/>
     </clipPath>
 
-    <filter id="cardShadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur in="SourceAlpha" stdDeviation="16" result="b"/>
-      <feOffset in="b" dx="6" dy="14" result="o"/>
-      <feFlood flood-color="#000000" flood-opacity="0.28"/>
-      <feComposite in2="o" operator="in"/>
-      <feMerge>
-        <feMergeNode/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-
-    <filter id="iconShadow" x="-30%" y="-30%" width="180%" height="180%">
-      <feGaussianBlur in="SourceAlpha" stdDeviation="6" result="b"/>
-      <feOffset in="b" dx="2" dy="6" result="o"/>
-      <feFlood flood-color="#7A1400" flood-opacity="0.45"/>
-      <feComposite in2="o" operator="in"/>
-      <feMerge>
-        <feMergeNode/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
   </defs>
 
-
-  <g>
-    <rect x="90" y="60" width="700" height="520" rx="26" ry="26" fill="url(#cardGrad)"/>
-  </g>
+  <rect x="90" y="60" width="700" height="520" rx="26" ry="26" fill="url(#cardGrad)"/>
 
   <g clip-path="url(#cardClip)">
     <rect x="90" y="60" width="700" height="520" fill="url(#glow)"/>
@@ -57,9 +33,7 @@
         stroke="#FFBEA0" stroke-opacity="0.35" stroke-width="2"/>
 
   <!-- 红包图标 -->
-  <g>
-    <rect x="152" y="262" width="110" height="138" rx="9" ry="9" fill="url(#goldGrad)"/>
-  </g>
+  <rect x="152" y="262" width="110" height="138" rx="9" ry="9" fill="url(#goldGrad)"/>
   <path d="M153 263 L261 263 L261 306 L207 328 L153 306 Z" fill="#EEB860"/>
   <path d="M153 306 L207 328" stroke="#D69634" stroke-width="2" stroke-opacity="0.9"/>
   <path d="M261 306 L207 328" stroke="#D69634" stroke-width="2" stroke-opacity="0.9"/>
