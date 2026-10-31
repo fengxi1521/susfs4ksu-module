@@ -1,0 +1,103 @@
+<!--
+Copyright 2026 Duck Apps Contributor
+If you have any questions, suggestions, or other inquiries, please email Eltavine <me@eltavine.com>.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+
+<resources>
+    <string name="duck_logo_description">โลโก้ Duck Detector</string>
+    <string name="user_agreement">ข้อตกลงผู้ใช้</string>
+    <string name="disclaimer">และข้อจำกัดความรับผิดชอบ</string>
+    <string name="please_read_carefully">โปรดอ่านอย่างละเอียดก่อนดำเนินการต่อ</string>
+    <string name="agreement_risk_title">คำเตือนการใช้งานที่มีความเสี่ยงสูง</string>
+    <string name="agreement_risk_body_emphasis">อย่านำผลลัพธ์เพียงครั้งเดียวไปใช้เป็นข้อสรุปสุดท้ายด้านกฎหมาย การปฏิบัติตามข้อกำหนด การรับประกัน หรือความปลอดภัย</string>
+    <string name="agreement_risk_body_template">Duck Detector ให้เพียงสัญญาณอ้างอิงเท่านั้น %1$s ก่อนตัดสินใจดำเนินการ โปรดพิจารณาร่วมกับการตรวจสอบด้วยตนเอง หลักฐานจากต้นทาง และการประเมินความเสี่ยงของคุณเองเสมอ</string>
+    <string name="user_agreement_title">ข้อตกลงผู้ใช้</string>
+    <string name="user_agreement_content" formatted="false">การใช้งาน Duck Detector ถือว่าคุณยอมรับเงื่อนไขต่อไปนี้:\n\n1. วัตถุประสงค์การใช้งาน\nแอปนี้ออกแบบมาเพื่อการศึกษาและการประเมินความปลอดภัยส่วนบุคคลเท่านั้น โดยช่วยให้ผู้ใช้เข้าใจสถานะความปลอดภัยของอุปกรณ์ตนเอง\n\n2. การไม่รับประกัน\nแอปนี้ให้บริการตามสภาพที่เป็นอยู่ โดยไม่มีการรับประกันใด ๆ ไม่ว่าชัดแจ้งหรือโดยนัย ผู้พัฒนาไม่รับประกันความถูกต้อง ความครบถ้วน หรือความน่าเชื่อถือของผลการตรวจจับ\n\n3. ความรับผิดชอบของผู้ใช้\nคุณต้องรับผิดชอบแต่เพียงผู้เดียวต่อวิธีการใช้งานแอปนี้และผลที่อาจเกิดขึ้นจากการใช้งานนั้น\n\n4. การปฏิบัติตามกฎหมาย\nคุณตกลงที่จะใช้แอปนี้ให้สอดคล้องกับกฎหมายและข้อบังคับระดับท้องถิ่น ระดับประเทศ และระดับสากลที่เกี่ยวข้องทั้งหมด</string>
+    <string name="disclaimer_title">ข้อจำกัดความรับผิดชอบ</string>
+    <string name="disclaimer_content" formatted="false">ประกาศสำคัญ:\n\n1. ข้อจำกัดของการตรวจจับ\nDuck Detector ใช้วิธีหลายแบบในการประเมินสถานะความปลอดภัยของอุปกรณ์ แต่ไม่มีวิธีใดที่แม่นยำ 100&#37; ผลลัพธ์ควรถูกมองว่าเป็นสัญญาณประกอบ ไม่ใช่ข้อสรุปสุดท้าย\n\n2. การแจ้งเตือนผิดพลาดและการพลาดตรวจ\nแอปนี้อาจให้ผลลวงหรือพลาดตรวจได้ โปรดใช้ร่วมกับเครื่องมือความปลอดภัยแบบมืออาชีพและการตรวจสอบด้วยตนเองเพื่อการประเมินที่ครบถ้วน\n\n3. การจำกัดความรับผิด\nผู้พัฒนา ผู้มีส่วนร่วม และผู้จัดจำหน่าย Duck Detector จะไม่รับผิดชอบต่อความเสียหายใด ๆ ทั้งโดยตรง โดยอ้อม โดยบังเอิญ เป็นกรณีพิเศษ หรือเป็นผลสืบเนื่องจากการใช้งานหรือการไม่สามารถใช้งานแอปนี้ได้\n\n4. บริการของบุคคลที่สาม\nการตรวจสอบการเพิกถอน TEE ใช้ snapshot ที่ฝังในแอปเป็นค่าเริ่มต้น หากคุณอนุญาตการอัปเดตข้อมูลการเพิกถอนออนไลน์ แอปอาจเชื่อมต่อกับ Google attestation revocation endpoint การสแกนความปลอดภัยยังคงทำงานภายในอุปกรณ์ของคุณ และผลการตรวจจับจะไม่ถูกอัปโหลดเป็น telemetry ของการสแกนโดยเจตนา</string>
+    <string name="privacy_notice_title">ประกาศความเป็นส่วนตัว</string>
+    <string name="privacy_notice_content" formatted="false">สรุปความเป็นส่วนตัว: การตรวจสอบความปลอดภัยทำงานภายในอุปกรณ์และจะไม่อัปโหลดผลการตรวจจับเป็น telemetry การตรวจสอบการเพิกถอน TEE ใช้ snapshot ในตัวเป็นค่าเริ่มต้น หลังจากตั้งค่าการเริ่มต้นเสร็จ แอปจะเชื่อมต่อ GitHub หนึ่งครั้งต่อการเปิดแบบ cold start เพื่อตรวจสอบข้อมูลอัปเดต Nightly หากเปิดเร่งความเร็ว GitHub คำขอเหล่านี้จะส่งผ่านบริการ gh-proxy.com ของบุคคลที่สาม</string>
+    <string name="timer_elapsed">ครบ 30 วินาที</string>
+    <string name="timer_waiting">โปรดรอ %1$d วินาที</string>
+    <string name="fully_reviewed">ตรวจครบแล้ว</string>
+    <string name="scroll_to_bottom">เลื่อนลงให้สุด</string>
+    <string name="i_agree_continue">ฉันยอมรับและดำเนินการต่อ</string>
+    <string name="complete_all_conditions">ทำเงื่อนไขให้ครบ</string>
+    <string name="agreement_acknowledgement">การดำเนินการต่อหมายความว่าคุณได้รับทราบและยอมรับเงื่อนไขเหล่านี้แล้ว</string>
+    <string name="update_open_failed">ไม่มีเบราว์เซอร์สำหรับเปิด GitHub</string>
+    <string name="startup_review_label">ตรวจสอบนโยบายการเริ่มต้น</string>
+    <string name="startup_preparing_title">กำลังเตรียมการเริ่มต้น</string>
+    <string name="startup_before_scan_title">ก่อนสแกน</string>
+    <string name="startup_loading_detail">ค่ากำหนดและการมองเห็น PackageManager ยังคงกำลังโหลด Detector ViewModel จะยังคงหยุดไว้จนกว่าจะเสร็จ</string>
+    <string name="startup_intro_detail">ทำตัวเลือกที่จำเป็นให้เสร็จก่อนการสแกนของ detector จะเริ่มขึ้น ที่นี่จะตรวจสอบการแจ้งเตือน เส้นทาง Live Update การรีเฟรช CRL ออนไลน์ และการมองเห็น PackageManager ในจุดเดียว pipeline ของ detector จะถูกบล็อกจนกว่าการ์ดที่จำเป็นด้านล่างจะได้รับการจัดการครบทั้งหมด</string>
+    <string name="startup_loading_state">กำลังโหลดสถานะการเริ่มต้น…</string>
+    <string name="startup_progress_resolved">จัดการการ์ดเริ่มต้นแล้ว %1$d จาก %2$d รายการ</string>
+    <string name="startup_loading_dependencies_title">กำลังโหลด dependency สำหรับการเริ่มต้น</string>
+    <string name="startup_loading_dependencies_detail">กำลังอ่านคลังการยินยอมและการมองเห็น PackageManager ก่อนที่ detector ใดจะเริ่มทำงาน</string>
+    <string name="startup_status_ready">พร้อม</string>
+    <string name="startup_status_action_required">ต้องดำเนินการ</string>
+    <string name="startup_status_skipped">ข้ามแล้ว</string>
+    <string name="startup_status_unsupported">ไม่รองรับ</string>
+    <string name="startup_status_waiting">รออยู่</string>
+    <string name="startup_status_regular">ปกติ</string>
+    <string name="startup_status_optional">ไม่บังคับ</string>
+    <string name="startup_status_acknowledged">รับทราบแล้ว</string>
+    <string name="startup_status_review_later">ตรวจภายหลัง</string>
+    <string name="startup_notifications_title">การแจ้งเตือน</string>
+    <string name="startup_notifications_ready_headline">เปิดการแจ้งเตือนการสแกนแล้ว</string>
+    <string name="startup_notifications_ready_detail">Duck Detector สามารถส่งการแจ้งเตือนความคืบหน้าการสแกนได้ในขณะที่การ์ด detector กำลังเก็บหลักฐาน</string>
+    <string name="startup_notifications_prompt_headline">เลือกว่าจะอนุญาตให้ความคืบหน้าการสแกนส่งการแจ้งเตือนหรือไม่</string>
+    <string name="startup_notifications_prompt_detail_api33">Android %1$d ต้องใช้สิทธิ์การแจ้งเตือนขณะทำงาน การสแกนตอนเริ่มต้นจะยังถูกบล็อกจนกว่าคุณจะอนุญาตหรือเลือกดำเนินการต่อโดยไม่เปิดใช้</string>
+    <string name="startup_notifications_prompt_detail_legacy">Android เวอร์ชันนี้ไม่ต้องแสดงคำขอสิทธิ์การแจ้งเตือนขณะทำงาน แต่ยังคงต้องบันทึกการตัดสินใจของคุณไว้ในนโยบายการเริ่มต้น</string>
+    <string name="startup_notifications_allow">อนุญาตการแจ้งเตือน</string>
+    <string name="startup_notifications_skip">ข้าม</string>
+    <string name="startup_notifications_skipped_headline">ข้ามการแจ้งเตือนแล้ว</string>
+    <string name="startup_notifications_skipped_detail">ความคืบหน้าการสแกนจะแสดงอยู่ในแอปเท่านั้นจนกว่าคุณจะอนุญาตสิทธิ์การแจ้งเตือนภายหลัง</string>
+    <string name="startup_live_update_title">Live Update</string>
+    <string name="startup_live_update_unsupported_headline">การแจ้งเตือนต่อเนื่องแบบ promoted ไม่พร้อมใช้งานบน Android เวอร์ชันนี้</string>
+    <string name="startup_live_update_unsupported_detail">Duck Detector จะใช้เส้นทางการแจ้งเตือนปกติเมื่อมีสิทธิ์การแจ้งเตือน</string>
+    <string name="startup_live_update_waiting_headline">Live Update ขึ้นอยู่กับเส้นทางการแจ้งเตือน</string>
+    <string name="startup_live_update_waiting_detail">โปรดอนุญาตสิทธิ์การแจ้งเตือนก่อน หากคุณยังปิดการแจ้งเตือนไว้ การ์ดนี้จะถอยกลับไปใช้เพียงความคืบหน้าในแอป</string>
+    <string name="startup_live_update_ready_headline">อนุญาตการแจ้งเตือนต่อเนื่องแบบ promoted แล้ว</string>
+    <string name="startup_live_update_ready_detail">บน Android เวอร์ชันที่รองรับ ความคืบหน้าการสแกนสามารถแสดงผ่านเส้นทาง Live Update ที่สมบูรณ์กว่าได้</string>
+    <string name="startup_live_update_prompt_headline">เลือกว่าจะใช้เส้นทาง Live Update ของ Android หรือไม่</string>
+    <string name="startup_live_update_prompt_detail">Duck Detector สามารถเปิดหน้าระบบสำหรับการแจ้งเตือนต่อเนื่องแบบ promoted ได้ หากคุณข้าม ความคืบหน้าการสแกนจะถอยกลับไปใช้การแจ้งเตือนปกติ</string>
+    <string name="startup_live_update_open_settings">เปิดการตั้งค่า</string>
+    <string name="startup_live_update_use_regular">ใช้การแจ้งเตือนปกติ</string>
+    <string name="startup_live_update_regular_headline">เลือกการแจ้งเตือนปกติแล้ว</string>
+    <string name="startup_live_update_regular_detail">การแจ้งเตือนต่อเนื่องแบบ promoted จะยังคงถูกปิด และความคืบหน้าการสแกนจะใช้เส้นทางการแจ้งเตือนปกติแทน</string>
+    <string name="startup_package_manager_title">PackageManager</string>
+    <string name="startup_package_restricted_headline">รายการแพ็กเกจดูเหมือนถูกจำกัดหรือถูกกรอง</string>
+    <string name="startup_package_restricted_detail">PackageManager เปิดเผยแพ็กเกจที่ติดตั้งเพียง %1$d รายการ Dangerous Apps และโพรบที่เกี่ยวข้องอาจรายงานเครื่องมือที่ติดตั้งต่ำกว่าความจริงภายใต้การมองเห็นที่ถูกจำกัด รายการแบบมีขอบเขต หรือการกรองสไตล์ HMA</string>
+    <string name="startup_package_continue_anyway">ดำเนินการต่ออยู่ดี</string>
+    <string name="startup_package_ack_headline">รับทราบการมองเห็น PackageManager ที่ถูกจำกัดแล้ว</string>
+    <string name="startup_package_ack_detail">จำนวนแพ็กเกจที่มองเห็นได้ในขณะนี้: %1$d รายการ ผลลัพธ์ของ Dangerous Apps อาจมีความระมัดระวังมากขึ้นภายใต้ขอบเขตรายการนี้</string>
+    <string name="startup_package_unavailable_headline">ไม่สามารถตรวจสอบรายการ PackageManager ได้</string>
+    <string name="startup_package_unavailable_detail">การค้นหารายการล้มเหลวหรือไม่พบแอปนี้ในรายการ ผลลัพธ์ที่ระบุว่าไม่พบแพ็กเกจจะถือว่ายังสรุปไม่ได้</string>
+    <string name="startup_package_low_inventory_headline">PackageManager ดูเหมือนครบ แต่จำนวนรายการที่มองเห็นได้กลับน้อยผิดปกติ</string>
+    <string name="startup_package_low_inventory_detail">จำนวนแพ็กเกจที่มองเห็นได้ในขณะนี้: %1$d รายการ การเริ่มต้นจะดำเนินต่อไป แต่ Dangerous Apps จะตรวจทบทวนสภาวะรายการต่ำนี้เป็นหลักฐานของการกรองที่อาจเกิดขึ้น</string>
+    <string name="startup_package_ready_headline">รายการ PackageManager ดูครบถ้วน</string>
+    <string name="startup_package_ready_detail">จำนวนแพ็กเกจที่มองเห็นได้ในขณะนี้: %1$d รายการ Dangerous Apps สามารถใช้เส้นทางรายการแพ็กเกจมาตรฐานได้</string>
+    <string name="navigation_home">หน้าหลัก</string>
+    <string name="navigation_settings">การตั้งค่า</string>
+    <string name="update_download_failed">ไม่สามารถดาวน์โหลดหรือตรวจสอบการอัปเดตได้</string>
+    <string name="update_install_permission_required">อนุญาตให้ติดตั้งจาก Duck Detector แล้วแตะติดตั้งอีกครั้ง</string>
+    <string name="update_install_failed">ไม่สามารถเปิดตัวติดตั้งได้</string>
+    <string name="update_install_fallback_copied_opened">การติดตั้งในเครื่องล้มเหลว คัดลอก URL ของ APK และเปิดในเบราว์เซอร์แล้ว</string>
+    <string name="update_install_fallback_copied_only">การติดตั้งในเครื่องล้มเหลว คัดลอก URL ของ APK แล้ว แต่ไม่สามารถเปิดเบราว์เซอร์ได้</string>
+    <string name="update_install_fallback_opened_only">การติดตั้งในเครื่องล้มเหลว เปิด URL ของ APK ในเบราว์เซอร์แล้ว แต่คัดลอกไม่สำเร็จ</string>
+    <string name="update_install_link_copied">คัดลอกลิงก์ดาวน์โหลด APK แล้ว</string>
+    <string name="update_apk_unavailable">ไฟล์อัปเดตที่ดาวน์โหลดใช้ไม่ได้ โปรดดาวน์โหลดอีกครั้ง</string>
+</resources>

@@ -1,0 +1,112 @@
+<!--
+Copyright 2026 Duck Apps Contributor
+If you have any questions, suggestions, or other inquiries, please email Eltavine <me@eltavine.com>.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+
+<resources>
+    <string name="scan_history_issue_title">Scan history requires attention</string>
+    <string name="scan_history_recovered">%1$d damaged history record(s) were excluded. The original file was preserved as %2$s in the private scan-history directory. Valid entries have been restored.</string>
+    <string name="scan_history_failed">Scan history could not be loaded or saved (%1$s). The existing file was not discarded. New history may not be recorded until storage access is restored.</string>
+    <string name="navigation_home">Home</string>
+    <string name="navigation_settings">Settings</string>
+    <string name="duck_logo_description">Duck Detector logo</string>
+    <string name="user_agreement">User Agreement</string>
+    <string name="disclaimer">&amp; Disclaimer</string>
+    <string name="please_read_carefully">Please read carefully before continuing</string>
+    <string name="agreement_risk_title">High-risk use reminder</string>
+    <string name="agreement_risk_body_emphasis">Do not treat any single result as a final legal, compliance, warranty, or security conclusion.</string>
+    <string name="agreement_risk_body_template">Duck Detector provides reference signals only. %1$s Always combine the app\'s output with manual verification, upstream evidence, and your own risk assessment before taking action.</string>
+    <string name="user_agreement_title">User Agreement</string>
+    <string name="user_agreement_content" formatted="false">By using Duck Detector, you agree to the following terms:\n\n1. Purpose of use\nThis application is designed solely for educational and personal security-assessment purposes. It helps users understand the security status of their own devices.\n\n2. No warranty\nThis application is provided \"as is\" without any warranties, express or implied. The developers do not guarantee the accuracy, completeness, or reliability of detection results.\n\n3. User responsibility\nYou are solely responsible for how you use this application and any consequences that may arise from its use.\n\n4. Compliance with laws\nYou agree to use this application in compliance with all applicable local, national, and international laws and regulations.</string>
+    <string name="disclaimer_title">Disclaimer</string>
+    <string name="disclaimer_content" formatted="false">IMPORTANT NOTICE:\n\n1. Detection limitations\nDuck Detector uses various methods to detect device security status, but no detection method is 100&#37; accurate. Results should be considered indicators rather than definitive assessments.\n\n2. False positives and false negatives\nThe application may produce false positives or false negatives. Always use professional security tools and your own verification for comprehensive assessment.\n\n3. No liability\nThe developers, contributors, and distributors of Duck Detector shall not be held liable for any direct, indirect, incidental, special, or consequential damages arising from the use or inability to use this application.\n\n4. Third-party services\nTEE revocation checks use a built-in snapshot by default. If you allow online revocation refresh, the app may contact the Google attestation revocation endpoint. Security scans themselves still run locally on your device, and detector findings are not intentionally uploaded as scan telemetry.</string>
+    <string name="privacy_notice_title">Privacy Notice</string>
+    <string name="privacy_notice_content" formatted="false">Privacy summary: Security checks run locally on your device. Detector findings are not intentionally uploaded as scan telemetry. TEE revocation checks use a built-in snapshot by default; if you allow online revocation refresh, the app may contact the Google attestation revocation endpoint. After startup choices are complete, the app contacts GitHub once per cold start to check Nightly update metadata. If you turn on GitHub acceleration, these requests go through the third-party gh-proxy.com service instead.</string>
+    <string name="timer_elapsed">30 seconds elapsed</string>
+    <string name="timer_waiting">Please wait %1$ds</string>
+    <string name="fully_reviewed">Fully reviewed</string>
+    <string name="scroll_to_bottom">Scroll to bottom</string>
+    <string name="i_agree_continue">I Agree &amp; Continue</string>
+    <string name="complete_all_conditions">Complete all conditions</string>
+    <string name="agreement_acknowledgement">By continuing, you acknowledge that you have read and agree to these terms.</string>
+    <string name="update_open_failed">No browser is available to open GitHub</string>
+    <string name="update_download_failed">The update could not be downloaded or verified</string>
+    <string name="update_install_permission_required">Allow installs from Duck Detector, then tap Install again</string>
+    <string name="update_install_failed">Could not open the package installer</string>
+    <string name="update_install_fallback_copied_opened">Local installation failed. The APK URL was copied and opened in the browser.</string>
+    <string name="update_install_fallback_copied_only">Local installation failed. The APK URL was copied, but no browser could open it.</string>
+    <string name="update_install_fallback_opened_only">Local installation failed. The browser opened the APK URL, but copying failed.</string>
+    <string name="update_install_link_copied">APK download link copied</string>
+    <string name="startup_review_label">Startup policy review</string>
+    <string name="startup_preparing_title">Preparing startup</string>
+    <string name="startup_preparing_detail">Loading agreement state before startup policy review.</string>
+    <string name="startup_before_scan_title">Before the scan</string>
+    <string name="startup_loading_detail">Preferences and PackageManager visibility are still being loaded. Detector ViewModels stay paused until this completes.</string>
+    <string name="startup_intro_detail">Review notifications, optional detector permissions and package visibility before scanning. Optional diagnostics can stay off. You can change these choices later in Settings.</string>
+    <string name="startup_loading_state">Loading startup state…</string>
+    <string name="startup_progress_resolved">%1$d of %2$d startup cards resolved</string>
+    <string name="startup_loading_dependencies_title">Loading startup dependencies</string>
+    <string name="startup_loading_dependencies_detail">Reading consent stores and PackageManager visibility before any detector starts.</string>
+    <string name="startup_status_ready">Ready</string>
+    <string name="startup_status_action_required">Action required</string>
+    <string name="startup_status_skipped">Skipped</string>
+    <string name="startup_status_unsupported">Unsupported</string>
+    <string name="startup_status_waiting">Waiting</string>
+    <string name="startup_status_regular">Regular</string>
+    <string name="startup_status_optional">Optional</string>
+    <string name="startup_status_acknowledged">Acknowledged</string>
+    <string name="startup_status_review_later">Review later</string>
+    <string name="startup_ui_style_title">UI style</string>
+    <string name="startup_ui_style_detail">Choose the interface engine used by Duck Detector. You can switch it later in Settings.</string>
+    <string name="startup_ui_style_material">Material 3</string>
+    <string name="startup_ui_style_miuix">MIUIX</string>
+    <string name="startup_notifications_title">Notifications</string>
+    <string name="startup_notifications_ready_headline">Scan notifications are enabled.</string>
+    <string name="startup_notifications_ready_detail">Duck Detector can publish scan-progress notifications while detector cards collect evidence.</string>
+    <string name="startup_notifications_prompt_headline">Choose whether scan progress may post notifications.</string>
+    <string name="startup_notifications_prompt_detail_api33">Android %1$d requires runtime notification permission. Startup scanning stays blocked until you allow it or explicitly continue without it.</string>
+    <string name="startup_notifications_prompt_detail_legacy">This Android version does not require a runtime notification prompt, but the startup policy still needs to record your choice.</string>
+    <string name="startup_notifications_allow">Allow notifications</string>
+    <string name="startup_notifications_skip">Skip</string>
+    <string name="startup_notifications_skipped_headline">Notifications were skipped.</string>
+    <string name="startup_notifications_skipped_detail">Scan progress will stay inside the app until you grant notification permission later.</string>
+    <string name="startup_live_update_title">Live Update</string>
+    <string name="startup_live_update_unsupported_headline">Promoted ongoing notifications are not available on this Android version.</string>
+    <string name="startup_live_update_unsupported_detail">Duck Detector will use a regular notification path when notification permission is available.</string>
+    <string name="startup_live_update_waiting_headline">Live Update depends on the notification path.</string>
+    <string name="startup_live_update_waiting_detail">Grant notification permission first. If you keep notifications disabled, this card will fall back to regular in-app progress only.</string>
+    <string name="startup_live_update_ready_headline">Promoted ongoing notifications are allowed.</string>
+    <string name="startup_live_update_ready_detail">On supported Android versions, scan progress can surface through the richer Live Update path.</string>
+    <string name="startup_live_update_prompt_headline">Choose whether to use the Android Live Update path.</string>
+    <string name="startup_live_update_prompt_detail">Duck Detector can open the system page for promoted ongoing notifications. If you skip this, scan progress falls back to a regular notification.</string>
+    <string name="startup_live_update_open_settings">Open settings</string>
+    <string name="startup_live_update_use_regular">Use regular</string>
+    <string name="startup_live_update_regular_headline">Regular notifications were selected.</string>
+    <string name="startup_live_update_regular_detail">Promoted ongoing notifications stay disabled. Scan progress will use the regular notification path instead.</string>
+    <string name="startup_package_manager_title">PackageManager</string>
+    <string name="startup_package_restricted_headline">Package inventory looks scoped or filtered.</string>
+    <string name="startup_package_restricted_detail">PackageManager exposed only %1$d installed packages. Dangerous Apps and related probes can under-report installed tools under restricted visibility, scoped inventory, or HMA-style filtering.</string>
+    <string name="startup_package_continue_anyway">Continue anyway</string>
+    <string name="startup_package_ack_headline">Restricted PackageManager visibility was acknowledged.</string>
+    <string name="startup_package_ack_detail">Current visible package count: %1$d. Dangerous Apps findings may be conservative under this inventory scope.</string>
+    <string name="startup_package_unavailable_headline">PackageManager inventory could not be verified.</string>
+    <string name="startup_package_unavailable_detail">The inventory query failed or did not include this app. Package-based absence results will be treated as inconclusive.</string>
+    <string name="startup_package_low_inventory_headline">PackageManager looks full but the visible inventory is unusually small.</string>
+    <string name="startup_package_low_inventory_detail">Current visible package count: %1$d. Startup will continue, but Dangerous Apps will review this low-inventory condition as potential filtering evidence.</string>
+    <string name="startup_package_ready_headline">PackageManager inventory looks full.</string>
+    <string name="startup_package_ready_detail">Current visible package count: %1$d. Dangerous Apps can use the standard package inventory path.</string>
+    <string name="update_apk_unavailable">The downloaded update is unavailable; download it again</string>
+    <string name="detector_manage_permissions">Manage app permissions</string>
+</resources>

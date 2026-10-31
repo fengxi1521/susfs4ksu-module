@@ -1,0 +1,21 @@
+duckdetector_native_unit(duckdetector_zygisk
+    common/codec.cpp
+    probes/fd_trap.cpp
+    probes/environment_probe.cpp
+    probes/solist_probe.cpp
+    probes/vmap_probe.cpp
+    probes/atexit_probe.cpp
+    probes/atexit/libc_objects.cpp
+    probes/atexit/self_memory.cpp
+    probes/atexit/table_reader.cpp
+    probes/atexit/table_evidence.cpp
+    probes/smaps_probe.cpp
+    probes/namespace_probe.cpp
+    probes/linker_hook_probe.cpp
+    probes/heap_entropy_probe.cpp
+    probes/thread_probe.cpp
+    probes/fd_probe.cpp
+    snapshot_builder.cpp
+    native_bridge.cpp
+    fdtrap_bridge.cpp
+)

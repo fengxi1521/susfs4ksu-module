@@ -1,0 +1,220 @@
+/*
+ * Copyright 2026 Duck Apps Contributor
+ * If you have any questions, suggestions, or other inquiries, please email Eltavine <me@eltavine.com>.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package com.eltavine.duckdetector.capability.selinuxpolicy.data
+
+import android.app.Application
+import android.app.Service
+import android.content.Intent
+import android.os.Binder
+import android.os.IBinder
+import android.os.Parcel
+import android.system.Os
+import android.os.SystemClock
+import android.util.Log
+
+public class SelinuxContextValidityCarrierService : Service() {
+
+    override fun onCreate() {
+        super.onCreate()
+        val serviceLoader = SelinuxContextValidityCarrierService::class.java.classLoader
+        val bridgeLoader = SelinuxContextValidityBridge::class.java.classLoader
+        trace("onCreate package=$packageName process=${Application.getProcessName()} " +
+            "serviceLoader=${loaderLabel(serviceLoader)} bridgeLoader=${loaderLabel(bridgeLoader)} " +
+            "sameLoader=${serviceLoader === bridgeLoader}")
+    }
+
+    override fun onDestroy() {
+        trace("onDestroy")
+        super.onDestroy()
+    }
+
+    private fun trace(message: String) {
+        Log.i("DuckSelinuxCarrier", "service pid=${Os.getpid()} ppid=${Os.getppid()} uid=${Os.getuid()} $message")
+    }
+
+    private fun loaderLabel(loader: ClassLoader?): String =
+        loader?.let { "${it.toString().substringBefore('[').take(64)}@${System.identityHashCode(it)}" }
+            ?: "bootstrap"
+
+    private val binder = object : Binder() {
+        override fun onTransact(
+            code: Int,
+            data: Parcel,
+            reply: Parcel?,
+            flags: Int,
+        ): Boolean {
+            return when (code) {
+                INTERFACE_TRANSACTION -> {
+                    reply?.writeString(SelinuxContextValidityCarrierProtocol.DESCRIPTOR)
+                    true
+                }
+
+                SelinuxContextValidityCarrierProtocol.TRANSACTION_COLLECT_SNAPSHOT -> {
+                    trace("transaction callerPid=${Binder.getCallingPid()} callerUid=${Binder.getCallingUid()}")
+                    data.enforceInterface(SelinuxContextValidityCarrierProtocol.DESCRIPTOR)
+                    val payload = buildSnapshotPayload()
+                    trace("transaction reply chars=${payload.length}")
+                    reply?.writeNoException()
+                    reply?.writeString(payload)
+                    true
+                }
+
+                else -> super.onTransact(code, data, reply, flags)
+            }
+        }
+    }
+
+    override fun onBind(intent: Intent?): IBinder {
+        trace("onBind component=${intent?.component}")
+        return binder
+    }
+
+    private fun buildSnapshotPayload(): String {
+        val payload = runCatching {
+            val payload = resolveCarrierPayload(
+                consumePreloadedRawData = SelinuxContextValidityBridge::consumePreloadedRawDataForCarrier,
+                onPayloadState = { cached, present ->
+                    trace("preload payload cached=$cached present=$present")
+                },
+            )
+            val origin = SelinuxCarrierProvenanceCodec.read(payload)
+            val expected = SelinuxCarrierExpectedCode(
+                appUid = applicationInfo.uid,
+                apkPath = applicationInfo.sourceDir.orEmpty(),
+                splitPaths = applicationInfo.splitSourceDirs?.toList().orEmpty(),
+                parentPid = Os.getppid(),
+            )
+            val verified = verifyPreloadedPayload(payload, expected, SystemClock.elapsedRealtimeNanos())
+            trace("preload origin pid=${origin?.preloadPid} apk=${origin?.apkPath} " +
+                "currentApk=${expected.apkPath} verified=${verified === payload}")
+            verified
+        }.getOrElse { throwable ->
+            carrierFailurePayload(
+                throwable.message ?: "SELinux carrier probe failed.",
+                "SELinux carrier probe crashed before returning the preloaded payload.",
+            )
+        }
+        return SelinuxCarrierProvenanceCodec.attachCarrierParent(payload, Os.getppid())
+    }
+
+    public companion object {
+        internal const val PRELOAD_PAYLOAD_UNAVAILABLE = "Dedicated app_zygote preload payload unavailable."
+
+        internal fun verifyPreloadedPayload(
+            payload: String,
+            expected: SelinuxCarrierExpectedCode,
+            nowNanos: Long,
+        ): String {
+            val origin = SelinuxCarrierProvenanceCodec.read(payload)
+            if (origin == null) {
+                val reason = runCatching { SelinuxContextValidityBridge().parse(payload).failureReason }.getOrNull()
+                if (reason == PRELOAD_PAYLOAD_UNAVAILABLE) return payload
+            }
+            val mismatch = SelinuxCarrierProvenanceCodec.mismatch(origin, expected, nowNanos)
+            return if (mismatch == null) payload else carrierFailurePayload(
+                reason = mismatch,
+                note = "App Zygote preload state does not match the isolated carrier's process or APK.",
+            )
+        }
+
+        @Volatile
+        private var cachedPreloadedPayload: String? = null
+
+        internal fun resolveCarrierPayload(
+            consumePreloadedRawData: () -> String?,
+            onPayloadState: (cached: Boolean, present: Boolean) -> Unit = { _, _ -> },
+        ): String {
+            cachedPreloadedPayload?.let {
+                onPayloadState(true, true)
+                return it
+            }
+            val raw = consumePreloadedRawData()
+            onPayloadState(false, !raw.isNullOrBlank())
+            if (!raw.isNullOrBlank()) {
+                cachedPreloadedPayload = raw
+                return raw
+            }
+            return carrierFailurePayload(
+                reason = PRELOAD_PAYLOAD_UNAVAILABLE,
+                note = "SELinux carrier service did not receive a preloaded app_zygote payload.",
+            )
+        }
+
+        internal fun carrierFailurePayload(
+            reason: String,
+            note: String,
+        ): String {
+            return SelinuxContextValidityPayloadCodec.encode(
+                SelinuxContextValiditySnapshot(
+                    dirtyPolicyFailureReason = reason,
+                    javaDirtyPolicyFailureReason = reason,
+                    policyloadSeqnoState = SelinuxPolicyloadSeqnoState.UNAVAILABLE.name,
+                    policyloadSeqnoFailureReason = reason,
+                    procAttrCurrentFailureReason = reason,
+                    failureReason = reason,
+                    dirtyPolicyNotes = listOf(note),
+                    javaDirtyPolicyNotes = listOf(note),
+                    policyloadSeqnoNotes = listOf(note),
+                    notes = listOf(note),
+                ),
+            )
+        }
+
+        internal fun clearCachedPreloadedPayloadForTests() {
+            cachedPreloadedPayload = null
+        }
+
+        internal fun procAttrCurrentGateFailureReason(
+            snapshot: SelinuxContextValiditySnapshot,
+            appUid: Int?,
+            uid: Int,
+        ): String? {
+            if (appUid == null) {
+                return "Application UID unavailable for app_zygote attr/current probe."
+            }
+            if (uid != appUid) {
+                return "UID mismatch: $uid != app uid $appUid"
+            }
+            if (!snapshot.available) {
+                return snapshot.failureReason ?: "Carrier SELinux context was unreadable."
+            }
+            if (snapshot.selinuxEnabled == false) {
+                return "SELinux is disabled in the carrier context."
+            }
+            if (snapshot.selinuxEnforced == false) {
+                return "SELinux is permissive in the carrier context."
+            }
+            if (!snapshot.carrierMatchesExpected) {
+                return "Carrier self-check did not land in app_zygote context."
+            }
+            if (snapshot.carrierContext?.startsWith("u:r:app_zygote:s0") == false) {
+                return "Carrier self-check did not match the expected app_zygote context prefix."
+            }
+            if (snapshot.pidContextMatchesCurrent == false) {
+                return "Carrier pid context did not match the current process context."
+            }
+            if (snapshot.procSelfContextMatchesCurrent == false) {
+                return "Carrier /proc/self context did not match the current process context."
+            }
+            if (snapshot.dyntransitionCheckPassed == false) {
+                return "Carrier dyntransition self-check failed."
+            }
+            return null
+        }
+    }
+}

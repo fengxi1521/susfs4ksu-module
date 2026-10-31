@@ -1,0 +1,80 @@
+<!--
+Copyright 2026 Duck Apps Contributor
+If you have any questions, suggestions, or other inquiries, please email Eltavine <me@eltavine.com>.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+
+<resources>
+    <string name="settings_important_title">ข้อสำคัญ</string>
+    <string name="settings_important_why">ทำไมจึงต้องมี Duck Detector?</string>
+    <string name="settings_important_intro">Duck Detector เป็นเครื่องมือตรวจสอบสภาพแวดล้อมของอุปกรณ์ Android ที่คล้ายกับ Momo</string>
+    <string name="settings_important_context">แม้การหมกมุ่นว่าสภาพแวดล้อมของอุปกรณ์ «ปกติ» หรือไม่อาจมากเกินไป แต่แอปและบริการบางอย่างปฏิบัติต่อผู้ใช้แตกต่างกันจริง โดยพิจารณาจากความสมบูรณ์ของอุปกรณ์ สภาพแวดล้อมของระบบ และสัญญาณความเสี่ยงอื่น ๆ</string>
+    <string name="settings_important_consequences">สิ่งนี้อาจนำไปสู่การยืนยันตัวตนเพิ่มเติม การจำกัดฟีเจอร์ การปฏิเสธให้บริการ หรือการควบคุมความเสี่ยงที่ไม่โปร่งใส คุณอาจไม่ได้รับการแจ้งเตือนที่ชัดเจน หรือไม่ทราบว่าเหตุใดอุปกรณ์ของคุณจึงได้รับการปฏิบัติที่แตกต่างออกไป</string>
+    <string name="settings_important_goal">Duck Detector มุ่งทำให้สัญญาณเกี่ยวกับสภาพแวดล้อมของอุปกรณ์ที่เคยไม่โปร่งใสเหล่านี้มองเห็นได้</string>
+    <string name="settings_important_evidence">เราให้ผลการวินิจฉัยและหลักฐานประกอบ แทนที่จะตัดสินใจแทนแอปของบุคคลที่สามว่าอุปกรณ์ของคุณควรได้รับความไว้วางใจหรือไม่</string>
+    <string name="author_wall_title">ผู้ร่วมพัฒนา</string>
+    <string name="author_wall_hint">ลากเพื่อเลื่อน · ใช้สองนิ้วเพื่อซูม · แตะเพื่อดูรายละเอียด</string>
+    <string name="author_wordmark_hint">กางสองนิ้วเพื่อดูตัวอักษรจากชื่อผู้ร่วมพัฒนา</string>
+    <string name="author_view_details">ดูรายละเอียด</string>
+    <string name="author_view_github">ดูบน GitHub</string>
+    <string name="author_details_close">ปิด</string>
+    <string name="about_clipboard_build_hash_line">แฮชบิลด์: %1$s</string>
+    <string name="about_clipboard_build_time_line">เวลาบิลด์ (UTC): %1$s UTC</string>
+    <string name="about_clipboard_label">ข้อมูลบิลด์ Duck Detector</string>
+    <string name="about_clipboard_version_line">เวอร์ชัน: %1$s (%2$d)</string>
+    <string name="about_copy_build_info_summary">คัดลอกเวอร์ชัน เวลาบิลด์ และแฮชบิลด์</string>
+    <string name="about_copy_toast">คัดลอกข้อมูลบิลด์แล้ว</string>
+    <string name="about_label_build_hash">แฮชบิลด์</string>
+    <string name="about_label_build_time">เวลาบิลด์</string>
+    <string name="about_label_copy_build_info">คัดลอกข้อมูลบิลด์</string>
+    <string name="about_label_email">อีเมล</string>
+    <string name="about_label_privacy">ความเป็นส่วนตัว / การใช้ข้อมูล</string>
+    <string name="about_label_version">เวอร์ชัน</string>
+    <string name="about_label_website">เว็บไซต์</string>
+    <string name="about_privacy_summary">การตรวจสอบทำงานภายในอุปกรณ์และไม่อัปโหลดผลลัพธ์ แอปเชื่อมต่อ GitHub หนึ่งครั้งต่อ cold start เพื่อรับข้อมูล Nightly (ผ่าน gh-proxy.com เมื่อเปิดเร่งความเร็ว GitHub) ส่วนการรีเฟรช CRL ออนไลน์ยังเป็นทางเลือก</string>
+    <string name="about_subtitle">ลิงก์โปรเจกต์และข้อมูลเมตาของบิลด์</string>
+    <string name="about_title">เกี่ยวกับ</string>
+    <string name="about_value_build_time">%1$s UTC</string>
+    <string name="about_value_version">%1$s (%2$d)</string>
+    <string name="author_summary_baka">TEE และ Zygisk</string>
+    <string name="author_summary_eltavine">มีส่วนร่วมด้าน UI, C++, ASM และ Kotlin</string>
+    <string name="author_summary_wxx">CI (Kotlin)</string>
+    <string name="author_summary_xiaotong">TEE (C++, Kotlin)</string>
+    <string name="github_acceleration_footer">gh-proxy.com เป็นบริการของบุคคลที่สาม เมื่อเปิดใช้ การตรวจสอบอัปเดตและการดาวน์โหลด Nightly จะส่งผ่านบริการนี้แทนการเชื่อมต่อ GitHub โดยตรง บริการนี้ส่งต่อการเปรียบเทียบ commit ไม่ได้ หน้าต่างอัปเดตจึงอาจแสดงเฉพาะ commit ล่าสุด</string>
+    <string name="github_acceleration_summary">ตรวจสอบและดาวน์โหลดอัปเดต Nightly ผ่าน gh-proxy.com</string>
+    <string name="github_acceleration_title">เร่งความเร็ว GitHub</string>
+    <string name="licenses_dialog_close">ปิด</string>
+    <string name="licenses_dialog_home_page">หน้าแรก</string>
+    <string name="licenses_dialog_no_license_text">ไม่มีข้อความใบอนุญาต</string>
+    <string name="licenses_dialog_open">เปิด</string>
+    <string name="licenses_dialog_source_repo">ซอร์สรีโป</string>
+    <string name="licenses_dialog_version">เวอร์ชัน %1$s</string>
+    <string name="licenses_entry_subtitle">ดูโปรเจกต์ภายนอกที่มากับบิลด์นี้และตรวจสอบประกาศใบอนุญาตของพวกมัน</string>
+    <string name="licenses_entry_title">ไลบรารีโอเพนซอร์ส</string>
+    <string name="licenses_inventory_subtitle">แตะ dependency ใดก็ได้เพื่อดูข้อความใบอนุญาตและลิงก์โปรเจกต์ต้นทาง</string>
+    <string name="licenses_inventory_title">รายการไลบรารีที่รวมมา</string>
+    <string name="licenses_screen_back">กลับ</string>
+    <string name="licenses_screen_subtitle">คอมโพเนนต์ภายนอกที่รวมมาในบิลด์นี้</string>
+    <string name="licenses_screen_title">ใบอนุญาตโอเพนซอร์ส</string>
+    <string name="settings_section_detection">ตัวเลือกการตรวจจับ</string>
+    <string name="settings_section_network">เครือข่าย</string>
+    <string name="settings_title">การตั้งค่า</string>
+    <string name="update_settings_label">ตรวจสอบอัปเดต</string>
+    <string name="update_status_available">มี Nightly รุ่นใหม่; แตะเพื่อดูรายละเอียด</string>
+    <string name="update_status_checking">กำลังตรวจสอบ GitHub…</string>
+    <string name="update_status_current">คุณใช้ Nightly รุ่นล่าสุดแล้ว</string>
+    <string name="update_status_failed">ตรวจสอบ GitHub ไม่สำเร็จ; แตะเพื่อลองใหม่</string>
+    <string name="update_status_idle">ตรวจสอบ GitHub Main Nightly หลัง cold start; แตะเพื่อตรวจตอนนี้</string>
+    <string name="settings_section_appearance">รูปลักษณ์</string>
+</resources>

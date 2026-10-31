@@ -1,0 +1,89 @@
+<!--
+Copyright 2026 Duck Apps Contributor
+If you have any questions, suggestions, or other inquiries, please email Eltavine <me@eltavine.com>.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+
+<resources>
+    <string name="settings_important_title">重要说明</string>
+    <string name="settings_important_why">为什么需要 Duck Detector？</string>
+    <string name="settings_important_intro">Duck Detector 是一款类似 Momo 的 Android 设备环境检测工具。</string>
+    <string name="settings_important_context">虽然过度关注设备环境是否「正常」可能有些魔怔，但不可否认，部分应用与服务确实会依据设备完整性、系统环境及其他风险信号区别对待用户。</string>
+    <string name="settings_important_consequences">这些差异可能表现为额外的身份验证、功能限制、服务拒绝，甚至不透明的风险控制。您未必会收到明确通知，也不一定知道自己的设备为何受到区别对待。</string>
+    <string name="settings_important_goal">Duck Detector 希望让这些原本不透明的设备环境信号变得可见。</string>
+    <string name="settings_important_evidence">我们提供检测结果与相关证据，而非替第三方应用判断您的设备是否值得信任。</string>
+    <string name="settings_ui_style_title">UI 风格</string>
+    <string name="settings_ui_style_description">选择 Duck Detector 的界面风格</string>
+    <string name="settings_style_miuix">MIUIX</string>
+    <string name="settings_style_material">Material 3</string>
+    <string name="author_wall_title">贡献者</string>
+    <string name="author_wall_hint">拖动浏览 · 双指缩放 · 点击头像查看详情</string>
+    <string name="author_wordmark_hint">双指放大查看贡献者姓名中的字符</string>
+    <string name="author_view_details">查看详情</string>
+    <string name="author_view_github">在 GitHub 上查看</string>
+    <string name="author_details_close">关闭</string>
+    <string name="about_clipboard_build_hash_line">构建哈希：%1$s</string>
+    <string name="about_clipboard_build_time_line">构建时间（UTC）：%1$s UTC</string>
+    <string name="about_clipboard_label">Duck Detector 构建信息</string>
+    <string name="about_clipboard_version_line">版本：%1$s (%2$d)</string>
+    <string name="about_copy_build_info_summary">复制版本、构建时间和构建哈希</string>
+    <string name="about_copy_toast">构建信息已复制</string>
+    <string name="about_label_build_hash">构建哈希</string>
+    <string name="about_label_build_time">构建时间</string>
+    <string name="about_label_copy_build_info">复制构建信息</string>
+    <string name="about_label_email">邮箱</string>
+    <string name="about_label_privacy">隐私 / 数据使用</string>
+    <string name="about_label_version">版本</string>
+    <string name="about_label_website">网站</string>
+    <string name="about_privacy_summary">检查在设备本地运行，不会上传检测结果。应用会在每次冷启动时访问一次 GitHub 获取 Nightly 更新元数据（开启 GitHub 加速后经由 gh-proxy.com）；在线 CRL 刷新仍为可选功能。</string>
+    <string name="about_subtitle">项目链接与构建元数据。</string>
+    <string name="about_title">关于</string>
+    <string name="about_value_build_time">%1$s UTC</string>
+    <string name="about_value_version">%1$s (%2$d)</string>
+    <string name="author_summary_5ec1cff">SELinux 与 LSPosed 误报发现</string>
+    <string name="author_summary_aviraxp">SELinux 与 LSPosed 误报反馈</string>
+    <string name="author_summary_baka">TEE 与 Zygisk</string>
+    <string name="author_summary_eltavine">负责 UI、C++、ASM 与 Kotlin。</string>
+    <string name="author_summary_qwq233">TEE</string>
+    <string name="author_summary_sinanb9">SELinux app zygote 崩溃反馈与内核追踪</string>
+    <string name="author_summary_wxx">CI（Kotlin）</string>
+    <string name="author_summary_xiaotong">TEE（C++、Kotlin）</string>
+    <string name="github_acceleration_footer">gh-proxy.com 为第三方服务。开启后，更新检查和 Nightly 下载将经由它中转，不再直接连接 GitHub。它无法中转提交对比，因此更新弹窗可能只列出最新一次提交。</string>
+    <string name="github_acceleration_summary">通过第三方 gh-proxy.com 检查和下载 Nightly，提交对比可能不可用，更新弹窗可能只显示最新提交</string>
+    <string name="github_acceleration_title">GitHub 加速</string>
+    <string name="licenses_dialog_close">关闭</string>
+    <string name="licenses_dialog_home_page">主页</string>
+    <string name="licenses_dialog_no_license_text">无可用许可证文本。</string>
+    <string name="licenses_dialog_open">打开</string>
+    <string name="licenses_dialog_source_repo">源代码仓库</string>
+    <string name="licenses_dialog_version">版本 %1$s</string>
+    <string name="licenses_entry_subtitle">浏览此构建内置的第三方项目，并查看其许可证声明</string>
+    <string name="licenses_entry_title">开源库</string>
+    <string name="licenses_inventory_subtitle">点击任意依赖项以查看许可证文本和上游项目链接</string>
+    <string name="licenses_inventory_title">内置库清单</string>
+    <string name="licenses_screen_back">返回</string>
+    <string name="licenses_screen_subtitle">此构建内置的第三方组件</string>
+    <string name="licenses_screen_title">开源许可证</string>
+    <string name="settings_section_detection">检测选项</string>
+    <string name="settings_section_network">网络</string>
+    <string name="settings_title">设置</string>
+    <string name="update_settings_label">检查更新</string>
+    <string name="update_status_available">有新的 Nightly 构建，点按查看详情</string>
+    <string name="update_status_checking">正在检查 GitHub…</string>
+    <string name="update_status_current">当前已是最新 Nightly 构建</string>
+    <string name="update_status_failed">无法检查 GitHub，点按重试</string>
+    <string name="update_status_idle">冷启动后会检查 GitHub Main Nightly，点按可立即检查</string>
+    <string name="settings_section_appearance">外观</string>
+    <string name="settings_manage_permissions">管理应用权限</string>
+</resources>

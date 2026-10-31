@@ -1,0 +1,80 @@
+<!--
+Copyright 2026 Duck Apps Contributor
+If you have any questions, suggestions, or other inquiries, please email Eltavine <me@eltavine.com>.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+
+<resources>
+    <string name="settings_important_title">Quan trọng</string>
+    <string name="settings_important_why">Vì sao cần Duck Detector?</string>
+    <string name="settings_important_intro">Duck Detector là công cụ kiểm tra môi trường thiết bị Android, tương tự Momo.</string>
+    <string name="settings_important_context">Việc quá bận tâm liệu môi trường thiết bị có «bình thường» hay không có thể là thái quá, nhưng một số ứng dụng và dịch vụ thực sự đối xử khác nhau với người dùng dựa trên tính toàn vẹn của thiết bị, môi trường hệ thống và các tín hiệu rủi ro khác.</string>
+    <string name="settings_important_consequences">Điều này có thể bao gồm yêu cầu xác minh danh tính bổ sung, hạn chế tính năng, từ chối cung cấp dịch vụ hoặc áp dụng các biện pháp kiểm soát rủi ro thiếu minh bạch. Bạn có thể không nhận được thông báo rõ ràng hoặc không biết vì sao thiết bị của mình bị đối xử khác biệt.</string>
+    <string name="settings_important_goal">Duck Detector hướng đến việc làm rõ những tín hiệu về môi trường thiết bị vốn thiếu minh bạch này.</string>
+    <string name="settings_important_evidence">Chúng tôi cung cấp kết quả chẩn đoán và bằng chứng hỗ trợ, thay vì quyết định thay các ứng dụng bên thứ ba xem thiết bị của bạn có đáng tin cậy hay không.</string>
+    <string name="author_wall_title">Người đóng góp</string>
+    <string name="author_wall_hint">Kéo để di chuyển · Chụm hai ngón tay để thu phóng · Chạm để xem chi tiết</string>
+    <string name="author_wordmark_hint">Dùng hai ngón tay để phóng to và xem các ký tự từ tên người đóng góp</string>
+    <string name="author_view_details">Xem chi tiết</string>
+    <string name="author_view_github">Xem trên GitHub</string>
+    <string name="author_details_close">Đóng</string>
+    <string name="about_clipboard_build_hash_line">Mã băm build: %1$s</string>
+    <string name="about_clipboard_build_time_line">Thời gian build (UTC): %1$s UTC</string>
+    <string name="about_clipboard_label">Thông tin build Duck Detector</string>
+    <string name="about_clipboard_version_line">Phiên bản: %1$s (%2$d)</string>
+    <string name="about_copy_build_info_summary">Sao chép phiên bản, thời gian build và mã băm build</string>
+    <string name="about_copy_toast">Đã sao chép thông tin build</string>
+    <string name="about_label_build_hash">Mã băm build</string>
+    <string name="about_label_build_time">Thời gian build</string>
+    <string name="about_label_copy_build_info">Sao chép thông tin build</string>
+    <string name="about_label_email">Email</string>
+    <string name="about_label_privacy">Quyền riêng tư / Dữ liệu</string>
+    <string name="about_label_version">Phiên bản</string>
+    <string name="about_label_website">Trang web</string>
+    <string name="about_privacy_summary">Các kiểm tra chạy cục bộ và kết quả không được tải lên. Ứng dụng kết nối GitHub một lần mỗi lần khởi động lạnh để lấy siêu dữ liệu Nightly (qua gh-proxy.com khi bật Tăng tốc GitHub). Làm mới CRL trực tuyến vẫn là tùy chọn.</string>
+    <string name="about_subtitle">Liên kết dự án và siêu dữ liệu bản build.</string>
+    <string name="about_title">Giới thiệu</string>
+    <string name="about_value_build_time">%1$s UTC</string>
+    <string name="about_value_version">%1$s (%2$d)</string>
+    <string name="author_summary_baka">TEE &amp; Zygisk</string>
+    <string name="author_summary_eltavine">Đóng góp UI, C++, ASM và Kotlin.</string>
+    <string name="author_summary_wxx">CI (Kotlin)</string>
+    <string name="author_summary_xiaotong">TEE (C++, Kotlin)</string>
+    <string name="github_acceleration_footer">gh-proxy.com là dịch vụ của bên thứ ba. Khi bật, việc kiểm tra cập nhật và tải Nightly sẽ đi qua dịch vụ này thay vì kết nối trực tiếp tới GitHub. Dịch vụ không chuyển tiếp được phần so sánh commit, nên hộp thoại cập nhật có thể chỉ hiển thị commit mới nhất.</string>
+    <string name="github_acceleration_summary">Kiểm tra và tải bản cập nhật Nightly qua gh-proxy.com</string>
+    <string name="github_acceleration_title">Tăng tốc GitHub</string>
+    <string name="licenses_dialog_close">Đóng</string>
+    <string name="licenses_dialog_home_page">Trang chủ</string>
+    <string name="licenses_dialog_no_license_text">Không có văn bản giấy phép.</string>
+    <string name="licenses_dialog_open">Mở</string>
+    <string name="licenses_dialog_source_repo">Kho mã nguồn</string>
+    <string name="licenses_dialog_version">Phiên bản %1$s</string>
+    <string name="licenses_entry_subtitle">Xem các dự án bên thứ ba đi kèm trong bản build này và kiểm tra thông báo giấy phép của chúng.</string>
+    <string name="licenses_entry_title">Thư viện mã nguồn mở</string>
+    <string name="licenses_inventory_subtitle">Chạm vào bất kỳ dependency nào để xem văn bản giấy phép và liên kết dự án nguồn.</string>
+    <string name="licenses_inventory_title">Danh mục thư viện đi kèm</string>
+    <string name="licenses_screen_back">Quay lại</string>
+    <string name="licenses_screen_subtitle">Các thành phần bên thứ ba được đóng gói trong bản build này.</string>
+    <string name="licenses_screen_title">Giấy phép mã nguồn mở</string>
+    <string name="settings_section_detection">Tùy chọn phát hiện</string>
+    <string name="settings_section_network">Mạng</string>
+    <string name="settings_title">Cài đặt</string>
+    <string name="update_settings_label">Kiểm tra cập nhật</string>
+    <string name="update_status_available">Có bản Nightly mới; chạm để xem chi tiết</string>
+    <string name="update_status_checking">Đang kiểm tra GitHub…</string>
+    <string name="update_status_current">Bạn đang dùng bản Nightly mới nhất</string>
+    <string name="update_status_failed">Không thể kiểm tra GitHub; chạm để thử lại</string>
+    <string name="update_status_idle">Kiểm tra GitHub Main Nightly sau khi khởi động lạnh; chạm để kiểm tra ngay</string>
+    <string name="settings_section_appearance">Giao diện</string>
+</resources>
