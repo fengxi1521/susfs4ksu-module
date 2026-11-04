@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Trae 无感网关</string>
+    <string name="channel_name">网关服务</string>
+    <string name="channel_desc">保持本地 OpenAI 兼容网关运行</string>
+    <string name="notif_running_title">Trae 网关运行中</string>
+    <string name="notif_stopped_title">Trae 网关已停止</string>
+    <string name="notif_action_panel">打开面板</string>
+    <string name="notif_action_stop">停止</string>
+</resources>

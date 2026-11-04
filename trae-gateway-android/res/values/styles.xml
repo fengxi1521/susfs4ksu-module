@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@drawable/bg_app</item>
+        <item name="android:colorAccent">#7C9DF5</item>
+        <item name="android:statusBarColor">#0B0F14</item>
+        <item name="android:navigationBarColor">#0B0F14</item>
+        <item name="android:textColorPrimary">#E8ECF4</item>
+        <item name="android:textColorSecondary">#8B94A7</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <style name="LabelStyle">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">#7F899D</item>
+        <item name="android:letterSpacing">0.04</item>
+    </style>
+</resources>
